@@ -14,6 +14,7 @@ class TestCalc {
         val resultZero2 = calc.calculateWaterAmount(arrayOf(1,2,3,4,5,6,7,8,9,10))
         val resultSome = calc.calculateWaterAmount(arrayOf(1,2,3,4,5,6,6,7,8,10))
         val resultMore = calc.calculateWaterAmount(arrayOf(1,2,3,4,5,6,7,6,10))
+        val resTest = calc.calculateWaterAmount(arrayOf(4,3,2,1,3,1,2,3,4))
 
         assert(result == 18L)
         assert(resultTwo == 9L)
@@ -21,6 +22,7 @@ class TestCalc {
         assert(resultZero2 == 0L)
         assert(resultSome == 0L)
         assert(resultMore == 1L)
+        assert(resTest == 13L)
     }
 
 }

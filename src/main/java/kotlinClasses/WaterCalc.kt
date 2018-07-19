@@ -35,13 +35,13 @@ class WaterCalc {
     }
 
     private fun findAllPeaks(landscape: Array<Int>, peaksIdx: MutableList<Pair<Int, Int>>, startIdx: Int, endIdx: Int) {
-        val highestIdx = findHighestIdx(landscape, startIdx, endIdx, false)
+        val highestIdx = findHighestIdx(landscape, startIdx, endIdx)
 
         if (highestIdx == -1)
             return
 
-        val highestLeft = findHighestIdx(landscape, startIdx, highestIdx - 1, true)
-        val highestRight = findHighestIdx(landscape, highestIdx + 1, endIdx, true)
+        val highestLeft = findHighestIdx(landscape, startIdx, highestIdx - 1)
+        val highestRight = findHighestIdx(landscape, highestIdx + 1, endIdx)
 
 
         if (highestLeft != -1) {
@@ -55,7 +55,7 @@ class WaterCalc {
         }
     }
 
-    private fun findHighestIdx(landscape: Array<Int>, start: Int, end: Int, erase: Boolean): Int {
+    private fun findHighestIdx(landscape: Array<Int>, start: Int, end: Int): Int {
         var highest = -1
         var value = 0
 
