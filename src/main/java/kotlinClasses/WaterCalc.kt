@@ -35,7 +35,6 @@ class WaterCalc {
     }
 
     private fun findAllPeaks(landscape: Array<Int>, peaksIdx: MutableList<Pair<Int, Int>>, startIdx: Int, endIdx: Int) {
-
         val highestIdx = findHighestIdx(landscape, startIdx, endIdx, false)
 
         if (highestIdx == -1)
@@ -69,9 +68,6 @@ class WaterCalc {
                 value = landscape[i]
             }
         }
-
-        if (highest == -1)
-            return highest
 
         return highest
     }
